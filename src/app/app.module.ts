@@ -9,6 +9,12 @@ import { ProductComponent } from './components/product/product.component';
 import { CustomerOrderComponent } from './components/customer-order/customer-order.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddEmployeeComponent } from './components/employee/add-employee/add-employee.component';
+import { EditEmployeeComponent } from './components/employee/edit-employee/edit-employee.component';
+import { EmployeeOrdersComponent } from './components/employee/employee-orders/employee-orders.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +24,16 @@ import { NavComponent } from './components/nav/nav.component';
     ProductComponent,
     CustomerOrderComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    AddEmployeeComponent,
+    EditEmployeeComponent,
+    EmployeeOrdersComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

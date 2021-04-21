@@ -1,1 +1,71 @@
-<p>employee works!</p>
+<div  >
+    <h4>Employees List</h4>
+   
+
+
+<!-- ********************************************* in progress ************************************************* -->
+
+
+         <div class="input-group-append">
+            <button
+              class="btn btn btn-info"
+              type="button"
+              (click)="sortEmployees(true)"
+            >
+              Display Active
+            </button>
+            <button
+              class="btn btn btn-info"
+              type="button"
+              (click)="sortEmployees(false)"
+            >
+              Display Inactive
+            </button>
+            <button
+              class="btn btn btn-info"
+              type="button"
+              (click)="refreshList()"
+            >
+              Clear
+            </button>
+          </div>
+        
+    
+
+
+
+ 
+
+
+
+
+
+
+        <!-- ************************************* Working code ******************************************************** -->
+        <table>
+        <tr   >
+            <th>Employee ID</th>
+            <th>Name</th>
+            <!-- <th>Address</th> -->
+            <!-- <th>TIN</th> -->
+            <th>Active</th>
+        </tr>
+       
+        <tr *ngFor="let employee of employees; let i = index">
+          <a style="text-decoration: none;" href="/employees/{{ employee.employeeid }}">
+            <td> {{ employee.employeeid }}</td>
+            <td> {{ employee.firstname }} {{ employee.lastname }}</td>
+            <!-- <td> {{ employee.address }}</td>
+            <td> {{ employee.tin }} </td> -->
+            <td> {{ employee.active }}</td>
+            </a>
+        </tr>
+
+
+    </table>
+
+    <!-- ********************************************************************************************************* -->
+
+   
+    <button> <a href="/employees/add"> Add Employee</a> </button>
+  </div>

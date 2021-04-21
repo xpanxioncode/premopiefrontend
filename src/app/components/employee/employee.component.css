@@ -1,0 +1,37 @@
+.employee-container {
+    background-color: rgba(0, 0, 0, 0.623);
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+a {
+    margin: 5px;
+}
+
+li {
+    color: black;
+}
+/* table,th,td {
+   
+} */
+
+
+table {
+    text-align: center;
+    width:100%;
+ 
+    
+}
+
+th {
+    padding: 0px;
+    margin-left: 50px;
+    text-align: justify;
+}
+td {
+    padding: 10px;
+    margin-left: 50px;
+}

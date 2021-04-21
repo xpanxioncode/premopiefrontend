@@ -1,0 +1,46 @@
+<div>
+    <form action="employees" method="POST">
+        <table>
+                <tr>
+                    <td> <input type="text" id="firstname" [(ngModel)]="employee.firstname" name="firstname" placeholder="First Name"> <br></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="lastname" [(ngModel)]="employee.lastname" name="lastname" placeholder="Last Name"> <br> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text"  id="address" [(ngModel)]="employee.address" name="address" placeholder="Address"> <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="tin" [(ngModel)]="employee.tin" name="tin" placeholder="Tax Identification Number"><br>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        Active: <input type="checkbox" id="active" [(ngModel)]="employee.active" name="active"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" (click)="saveEmployee()" value="Submit">
+                        </td>
+                </tr>
+            
+
+        </table>
+
+        <br>
+       
+        
+        
+        
+        
+
+    </form>
+
+</div>

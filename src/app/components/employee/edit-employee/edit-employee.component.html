@@ -1,0 +1,24 @@
+<div>
+
+    <table>
+        <tr>
+            <th>Employee ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Adddress</th>
+            <th>TIN</th>
+            <th>Active</th>
+        </tr>
+        <tr *ngFor="let employee of employees; let i = index">
+            <a style="text-decoration: none;" href="/employees/{{ employee.employeeid }}">
+              <td> {{ employee.employeeid }}</td>
+              <td> {{ employee.firstname }}</td>
+              <td>{{ employee.lastname }}</td>
+              <td> {{ employee.address }}</td>
+              <td> {{ employee.tin }} </td>
+              <td> {{ employee.active }}</td>
+              </a>
+          </tr>
+    </table>
+
+</div>
