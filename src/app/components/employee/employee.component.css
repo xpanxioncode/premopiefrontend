@@ -14,24 +14,8 @@ a {
 li {
     color: black;
 }
-/* table,th,td {
-   
-} */
-
-
-table {
-    text-align: center;
-    width:100%;
- 
     
-}
 
-th {
-    padding: 0px;
-    margin-left: 50px;
-    text-align: justify;
-}
-td {
-    padding: 10px;
-    margin-left: 50px;
-}
+
+
+

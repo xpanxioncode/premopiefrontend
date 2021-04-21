@@ -1,3 +1,4 @@
+import { formatCurrency } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/services/employee.service';
 
@@ -40,6 +41,11 @@ export class AddEmployeeComponent implements OnInit {
         error => {
           console.log(error);
         });
+
+        // this.retrieveEmployees();
+       
+       
+
   }
 
   newEmployee(): void {

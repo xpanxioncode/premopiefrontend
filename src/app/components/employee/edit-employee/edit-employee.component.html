@@ -1,24 +1,28 @@
 <div>
+      <div *ngIf="currentEmp">
+          <br><br>
+            <form>
+                   <label for="employeeid">Employee ID </label> 
+                   <input [(ngModel)]="currentEmp.employeeid" name="employeeid" id="employeeid" type="text">
+                    
 
-    <table>
-        <tr>
-            <th>Employee ID</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Adddress</th>
-            <th>TIN</th>
-            <th>Active</th>
-        </tr>
-        <tr *ngFor="let employee of employees; let i = index">
-            <a style="text-decoration: none;" href="/employees/{{ employee.employeeid }}">
-              <td> {{ employee.employeeid }}</td>
-              <td> {{ employee.firstname }}</td>
-              <td>{{ employee.lastname }}</td>
-              <td> {{ employee.address }}</td>
-              <td> {{ employee.tin }} </td>
-              <td> {{ employee.active }}</td>
-              </a>
-          </tr>
-    </table>
+                     <label for="firstname"> First Name </label>                       
+                    <input [(ngModel)]="currentEmp.firstname" name="firstname" id="firstname" type="text">
 
+                    <label for="lastname"> Last Name</label>                      
+                    <input [(ngModel)]="currentEmp.lastname" name="lastname" id="lastname" type="text">
+                    <label for="address"> Address</label>                     
+                    <input [(ngModel)]="currentEmp.address" name="address" id="address" type="text">
+
+                    <label for="tin"> <td> TIN </label>                     
+                    <input [(ngModel)]="currentEmp.tin" name="tin" id="tin" type="text">
+
+                    <label for="active"> Active</label>                     
+                    <input [(ngModel)]="currentEmp.active" name="active" id="active" type="checkbox">
+                    <button type="submit" (click)="updateEmployee()" > Update Employee</button>
+               
+            </form>
+    </div>
+            
+         
 </div>

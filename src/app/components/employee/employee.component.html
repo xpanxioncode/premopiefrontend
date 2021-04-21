@@ -44,7 +44,7 @@
         <!-- ************************************* Working code ******************************************************** -->
         <table>
         <tr   >
-            <th>Employee ID</th>
+            <!-- <th>Employee ID</th> -->
             <th>Name</th>
             <!-- <th>Address</th> -->
             <!-- <th>TIN</th> -->
@@ -52,13 +52,16 @@
         </tr>
        
         <tr *ngFor="let employee of employees; let i = index">
-          <a style="text-decoration: none;" href="/employees/{{ employee.employeeid }}">
-            <td> {{ employee.employeeid }}</td>
-            <td> {{ employee.firstname }} {{ employee.lastname }}</td>
+          
+            <!-- <td> {{ employee.employeeid }}</td> -->
+            <td> <a style="text-decoration: none;" href="/employees/{{ employee.employeeid }}">
+              {{ employee.firstname }} {{ employee.lastname }} </a>
+            </td>
             <!-- <td> {{ employee.address }}</td>
             <td> {{ employee.tin }} </td> -->
-            <td> {{ employee.active }}</td>
-            </a>
+            <td> <a style="text-decoration: none;" href="/employees/{{ employee.employeeid }}">
+              {{ employee.active }} </a></td>
+            
         </tr>
 
 
