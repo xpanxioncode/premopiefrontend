@@ -7,19 +7,23 @@ import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProductComponent } from './components/product/product.component';
 import { AddEmployeeComponent } from './components/employee/add-employee/add-employee.component';
+import { AddCustomerComponent } from './components/customer/add-customer/add-customer.component';
 import { EditEmployeeComponent } from './components/employee/edit-employee/edit-employee.component';
 import { EmployeeOrdersComponent } from './components/employee/employee-orders/employee-orders.component';
+import { EditCustomerComponent } from './components/customer/edit-customer/edit-customer.component';
 
 
 const routes: Routes = [
   { path:'home', component:HomeComponent},
   { path:'customer', component:CustomerComponent},
+  { path:'customers/add', component:AddCustomerComponent},
   { path:'employee', component:EmployeeComponent},
   { path:'product', component:ProductComponent},
   { path:'customerorder', component:CustomerOrderComponent},
   { path:'nav', component:NavComponent},
   {path: 'employees/add', component: AddEmployeeComponent},
-  {path: 'employees/:id', component: EditEmployeeComponent},   
+  {path: 'employees/:id', component: EditEmployeeComponent},  
+  {path: 'customers/:id', component: EditCustomerComponent}, 
   {path: 'employees/orders/:id', component: EmployeeOrdersComponent}
 ];
 

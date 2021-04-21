@@ -1,22 +1,30 @@
-<div>
-    <h1>Customer Table</h1>
-    <table>
+<div  >
+    <h4>Customers List</h4>
+        
+        <table>
         <tr>
+            <th>Name</th>
             <th>Customer ID</th>
-            <th>Customer Address</th>
-            <th>Customer Name</th>
+            <th>Address</th> 
             <th>Phone Number</th>
             <th>Zip Code</th>
         </tr>
-        <!-- <tr *ngFor="let customer of customers">
-      
-            <td>${customer.customerid}</td>
-            <td>${{customer.address}}</td>
-            <td>${{customer.name}}</td>
-            <td>${{customer.phonenumber}}</td>
-            <td>${{customer.zip}}</td>
-      
-        </tr> -->
-        
-      </table>
-</div>
+       
+        <tr *ngFor="let customer of customers; let i = index">
+          
+            <td> <a style="text-decoration: none;" href="/customers/{{ customer.customerid }}">
+                {{ customer.firstname }} {{ customer.lastname }} </a>
+            </td>
+            <td>{{ customer.customerid }}</td> 
+            <td>{{ customer.address }}</td>
+            <td>{{ customer.phonenumber }}</td>
+            <td>{{ customer.zip }}</td>
+
+          
+        </tr>
+
+    </table>
+
+   
+    <button> <a href="/customers/add"> Add Customer</a> </button>
+  </div>

@@ -1,0 +1,48 @@
+<div>
+    <form action="customers" method="POST">
+        <table>
+                <tr>
+                    <td> <input type="text" id="firstname" [(ngModel)]="customer.firstname" name="firstname" placeholder="First Name"> <br></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="lastname" [(ngModel)]="customer.lastname" name="lastname" placeholder="Last Name"> <br> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text"  id="address" [(ngModel)]="customer.address" name="address" placeholder="Address"> <br>
+                    </td>
+                </tr>
+               
+                <tr>
+                    <td>
+                        <input type="text" id="phonenumber" [(ngModel)]="customer.phonenumber" name="phonenumber" placeholder="Phone Number"><br>
+                    </td>
+                </tr>
+             
+                <tr>
+                    <td>
+                        <input type="text" id="zip" [(ngModel)]="customer.zip" name="zip" placeholder="Zip Code"><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="button" (click)="saveCustomer()" value="Submit">
+                
+                        </td>
+                </tr>
+        
+
+            
+
+        </table>
+
+        <br>
+        
+
+    </form>
+
+</div>

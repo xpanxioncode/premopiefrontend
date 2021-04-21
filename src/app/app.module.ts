@@ -14,6 +14,8 @@ import { AddEmployeeComponent } from './components/employee/add-employee/add-emp
 import { EditEmployeeComponent } from './components/employee/edit-employee/edit-employee.component';
 import { EmployeeOrdersComponent } from './components/employee/employee-orders/employee-orders.component';
 import { FormsModule } from '@angular/forms';
+import { AddCustomerComponent } from './components/customer/add-customer/add-customer.component';
+import { EditCustomerComponent } from './components/customer/edit-customer/edit-customer.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     AddEmployeeComponent,
     EditEmployeeComponent,
-    EmployeeOrdersComponent
+    EmployeeOrdersComponent,
+    AddCustomerComponent,
+    EditCustomerComponent
   ],
   imports: [
     BrowserModule,
