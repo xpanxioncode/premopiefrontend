@@ -13,7 +13,7 @@ h1 {
 .banner {
   position: relative;
   height: 300px;
-  background-image: url("https://www.bing.com/images/search?view=detailV2&ccid=dFZLouT7&id=6FBE0AB0465F50212B02A6337BEDBDB994CC72ED&thid=OIP.dFZLouT7OG4lzn7BR-u3BQHaHa&mediaurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f12%2f93%2f4f%2f12934f964f51101659278bbaff7a92ef.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR74564ba2e4fb386e25ce7ec147ebb705%3frik%3d7XLMlLm97Xszpg%26pid%3dImgRaw&exph=735&expw=735&q=All+veggie+pizza+delicious&simid=608020240795389291&ck=00F39510B306329F5772A74CA0372F84&selectedIndex=12&FORM=IRPRST&ajaxhist=0");
+  background-image: url("pepperoni-pizza-in-box.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
