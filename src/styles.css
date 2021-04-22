@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+
+    /*
+    background-image: url('https://images.squarespace-cdn.com/content/v1/58efe4ac1b631b6e835e202d/1503516157158-KWNHZZF7WGYDCK1HUC1X/ke17ZwdGBToddI8pDm48kKAwwdAfKsTlKsCcElEApLR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UegTYNQkRo-Jk4EWsyBNhwKrKLo5CceA1-Tdpfgyxoog5ck0MD3_q0rY3jFJjjoLbQ/Harry%27sItalian_124+copy.jpg?format=2500w');
+    background-position: top left 20px;
+    */
+    background-image: url('https://c.na84.content.force.com/servlet/servlet.ImageServer?id=01550000002XGMD&oid=00D50000000JMrK&lastMod=1472753049000');
+    background-position: top right;
+    text-align: center;
+}
+
+h1, nav, h4, table, p {
+    background: orange;
+}
+
+a {
+    text-decoration: none
+}
+
+table {
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+/*
+h1, table, p, form {
+    text-align: center;
+}
+*/
