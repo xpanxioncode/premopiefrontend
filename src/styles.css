@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-h1, nav, h4, table, p {
+h1, h2, h3, nav, h4, table, p, form label {
     background: coral;
 }
 
@@ -23,9 +23,16 @@ table {
     margin-top: 20px;
 }
 
-
-/*
-h1, table, p, form {
-    text-align: center;
+form td {
+    padding: 20px
 }
-*/
+
+form input {
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+button {
+    margin-top: 20px;
+}
+

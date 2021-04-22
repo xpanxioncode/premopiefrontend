@@ -1,30 +1,31 @@
+<h3>Edit Customer</h3>
 <div>
     <div *ngIf="currentCustomer">
-        <br><br>
+
           <form>
-                 <label for="customerid">Customer ID </label> 
+                 <label for="customerid">Customer ID </label><br>
                  <input [(ngModel)]="currentCustomer.customerid" name="customerid" id="customerid" type="text">
-                <br><br>
+                 <br>
 
-                  <label for="firstname"> First Name </label>                       
+                  <label for="firstname"> First Name </label><br>                    
                   <input [(ngModel)]="currentCustomer.firstname" name="firstname" id="firstname" type="text">
-                  <br><br>
+                 <br>
 
-                  <label for="lastname"> Last Name</label>                      
+                  <label for="lastname"> Last Name</label><br>                     
                   <input [(ngModel)]="currentCustomer.lastname" name="lastname" id="lastname" type="text">
-                  <br><br>
+                  <br>
 
-                  <label for="address"> Address</label>                     
+                  <label for="address"> Address</label><br>                     
                   <input [(ngModel)]="currentCustomer.address" name="address" id="address" type="text">
-                  <br><br>
+                  <br>
 
-                  <label for="phonenumber"> <td> Phone Number </label>                     
+                  <label for="phonenumber"> Phone Number </label><br>                    
                   <input [(ngModel)]="currentCustomer.phonenumber" name="phonenumber" id="phonenumber" type="text">
-                  <br><br>
+                  <br>
 
-                  <label for="zip"> <td> Zip Code </label>                     
+                  <label for="zip">Zip Code </label><br>                   
                   <input [(ngModel)]="currentCustomer.zip" name="zip" id="zip" type="text">
-                  <br><br>
+                  <br>
                
                   <button type="submit" (click)="updateCustomer()" > Update Customer</button>
              

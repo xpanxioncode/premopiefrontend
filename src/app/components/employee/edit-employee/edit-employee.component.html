@@ -1,24 +1,24 @@
+<h3>Edit Employee</h3>
 <div>
       <div *ngIf="currentEmp">
-          <br><br>
             <form>
-                   <label for="employeeid">Employee ID </label> 
-                   <input [(ngModel)]="currentEmp.employeeid" name="employeeid" id="employeeid" type="text">
+                   <label for="employeeid">Employee ID </label><br>
+                   <input [(ngModel)]="currentEmp.employeeid" name="employeeid" id="employeeid" type="text"><br>
                     
 
-                     <label for="firstname"> First Name </label>                       
-                    <input [(ngModel)]="currentEmp.firstname" name="firstname" id="firstname" type="text">
+                     <label for="firstname"> First Name </label><br>                      
+                    <input [(ngModel)]="currentEmp.firstname" name="firstname" id="firstname" type="text"><br>
 
-                    <label for="lastname"> Last Name</label>                      
-                    <input [(ngModel)]="currentEmp.lastname" name="lastname" id="lastname" type="text">
-                    <label for="address"> Address</label>                     
-                    <input [(ngModel)]="currentEmp.address" name="address" id="address" type="text">
+                    <label for="lastname"> Last Name</label><br>                     
+                    <input [(ngModel)]="currentEmp.lastname" name="lastname" id="lastname" type="text"><br>
+                    <label for="address"> Address</label><br>                     
+                    <input [(ngModel)]="currentEmp.address" name="address" id="address" type="text"><br>
 
-                    <label for="tin"> <td> TIN </label>                     
-                    <input [(ngModel)]="currentEmp.tin" name="tin" id="tin" type="text">
+                    <label for="tin"> TIN </label><br>                     
+                    <input [(ngModel)]="currentEmp.tin" name="tin" id="tin" type="text"><br>
 
-                    <label for="active"> Active</label>                     
-                    <input [(ngModel)]="currentEmp.active" name="active" id="active" type="checkbox">
+                    <label for="active"> Active</label> <br>                    
+                    <input [(ngModel)]="currentEmp.active" name="active" id="active" type="checkbox"><br>
                     <button type="submit" (click)="updateEmployee()" > Update Employee</button>
                
             </form>
