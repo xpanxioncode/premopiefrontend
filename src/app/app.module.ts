@@ -14,8 +14,14 @@ import { AddEmployeeComponent } from './components/employee/add-employee/add-emp
 import { EditEmployeeComponent } from './components/employee/edit-employee/edit-employee.component';
 import { EmployeeOrdersComponent } from './components/employee/employee-orders/employee-orders.component';
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
 import { AddCustomerComponent } from './components/customer/add-customer/add-customer.component';
 import { EditCustomerComponent } from './components/customer/edit-customer/edit-customer.component';
+=======
+import { OrdersComponent } from './components/orders/orders.component';
+import { AddOrderComponent } from './components/orders/add-order/add-order.component';
+import { EditOrderComponent } from './components/orders/edit-order/edit-order.component';
+>>>>>>> b4a6a1ba784d35645d73883c5a2ba61af278e316
 
 
 @NgModule({
@@ -30,8 +36,14 @@ import { EditCustomerComponent } from './components/customer/edit-customer/edit-
     AddEmployeeComponent,
     EditEmployeeComponent,
     EmployeeOrdersComponent,
+<<<<<<< HEAD
     AddCustomerComponent,
     EditCustomerComponent
+=======
+    OrdersComponent,
+    AddOrderComponent,
+    EditOrderComponent
+>>>>>>> b4a6a1ba784d35645d73883c5a2ba61af278e316
   ],
   imports: [
     BrowserModule,
