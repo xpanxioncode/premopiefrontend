@@ -1,5 +1,10 @@
 <div class="product-container">
     <div class="row">
+        <div>
+            
+        </div>
+
+
         <div class="container">
             <!--Commented out the banner 
                 so we wouldn't have the pizza picture
@@ -19,8 +24,8 @@
 
                 <tbody style="font-size: large;">
                     <tr *ngFor="let product of products">
+                        <td>{{product.name}}</td>
                         <td>{{product.description}}</td>
-                        <td>{{product.size}}</td>
                         <td style="text-align: center;">${{product.price}}</td>
                     </tr>
                 </tbody>
