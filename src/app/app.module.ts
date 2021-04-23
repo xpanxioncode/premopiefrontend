@@ -19,6 +19,15 @@ import { EditCustomerComponent } from './components/customer/edit-customer/edit-
 import { OrdersComponent } from './components/orders/orders.component';
 import { AddOrderComponent } from './components/orders/add-order/add-order.component';
 import { EditOrderComponent } from './components/orders/edit-order/edit-order.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from  '@angular/material';
+import { MatButtonModule} from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 
 
 @NgModule({
@@ -43,7 +52,17 @@ import { EditOrderComponent } from './components/orders/edit-order/edit-order.co
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
