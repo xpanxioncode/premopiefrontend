@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CustomerOrderComponent } from './components/customer-order/customer-order.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,6 +10,8 @@ import { AddCustomerComponent } from './components/customer/add-customer/add-cus
 import { EditEmployeeComponent } from './components/employee/edit-employee/edit-employee.component';
 import { EmployeeOrdersComponent } from './components/employee/employee-orders/employee-orders.component';
 import { EditCustomerComponent } from './components/customer/edit-customer/edit-customer.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { AddOrderComponent } from './components/orders/add-order/add-order.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path:'customers/add', component:AddCustomerComponent},
   { path:'employee', component:EmployeeComponent},
   { path:'product', component:ProductComponent},
-  { path:'customerorder', component:CustomerOrderComponent},
+  { path:'orders', component:OrdersComponent},
+  { path:'orders/add', component:AddOrderComponent},
   { path:'nav', component:NavComponent},
   {path: 'employees/add', component: AddEmployeeComponent},
   {path: 'employees/:id', component: EditEmployeeComponent},  

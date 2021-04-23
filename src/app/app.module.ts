@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { CustomerComponent } from './components/customer/customer.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { ProductComponent } from './components/product/product.component';
-import { CustomerOrderComponent } from './components/customer-order/customer-order.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -19,6 +18,7 @@ import { EditCustomerComponent } from './components/customer/edit-customer/edit-
 import { OrdersComponent } from './components/orders/orders.component';
 import { AddOrderComponent } from './components/orders/add-order/add-order.component';
 import { EditOrderComponent } from './components/orders/edit-order/edit-order.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { EditOrderComponent } from './components/orders/edit-order/edit-order.co
     CustomerComponent,
     EmployeeComponent,
     ProductComponent,
-    CustomerOrderComponent,
+    OrdersComponent,
     HomeComponent,
     NavComponent,
     AddEmployeeComponent,
@@ -43,7 +43,8 @@ import { EditOrderComponent } from './components/orders/edit-order/edit-order.co
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

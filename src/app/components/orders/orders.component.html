@@ -1,19 +1,34 @@
-<div>
-    <h4>Orders</h4>
-    <div>
-        <!-- <button
-            class="btn btn btn-info"
-            type="button"
-            (click)="sortOrders(true)"
-        > Sort by Product Name </button> -->
-
-        <table>
-            <tr>
-                <th>Product Name</th>
-                <th>Quantity</th>
-            </tr>
-            <tr></tr>
-        </table>
-
+<div class="product-container">
+    <br>
+    <div class="row">
+        <div class="container">
+            <div class="banner">
+                <h1>Orders</h1>
+            </div>
+            <br>
+            <table class="table table-bordered">
+                <thead style="text-align: center;">
+                    <tr style="font-size: large;">
+                        <th>Order ID</th>
+                        <th>Employee</th>
+                        <th>Customer ID</th>
+                        <th>Time Order Created</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody style="font-size: large;">
+                    <tr *ngFor="let order of orders">
+                        <td>{{order.orderid}}</td>
+                        <td>{{order.employeeid}}</td>
+                        <td>{{order.customerid}}</td>
+                        <td>{{order.timeordercreated}}</td>
+                        <td>{{order.total}}</td>
+  
+                    </tr>
+                </tbody>
+            </table>
+           <br> <a routerLink="/orders/add"><button class="btn btn-success pull-right" > New Order?</button></a><br><br>
+            <a routerLink="/home"><button class="btn btn-success pull-right" > Go Back To Home Screen</button></a><br><br>
+        </div>
     </div>
-</div>
+</div> 

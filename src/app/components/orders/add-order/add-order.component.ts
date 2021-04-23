@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-add-order',
@@ -7,9 +8,57 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddOrderComponent implements OnInit {
 
-  constructor() { }
+  orders = {
+    customerid: '',
+    employeeid: '',
+    timeordercreated: Date,
+    total: null
+  }
+  submitted = false;
+
+  constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
   }
 
+
+  saveOrder(): void {
+    const data = {
+      customerid: this.orders.customerid,
+      employeeid: this.orders.employeeid,
+      timeordercreated: this.orders.timeordercreated,
+      total: this.orders.total
+    };
+
+    console.log(data);
+  
+
+    this.orderService.create(data)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.submitted = true;
+        },
+        error => {
+          console.log(error);
+        });
+
+        // this.retrieveEmployees();
+       
+       
+
+  }
+
+  newOrders(): void {
+    this.submitted = false;
+    this.orders = {
+      customerid: '',
+      employeeid: '',
+      timeordercreated: Date,
+      total: null
+    };
+  }
+
 }
+
+
