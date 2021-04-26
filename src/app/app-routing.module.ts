@@ -12,7 +12,7 @@ import { EmployeeOrdersComponent } from './components/employee/employee-orders/e
 import { EditCustomerComponent } from './components/customer/edit-customer/edit-customer.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { AddOrderComponent } from './components/orders/add-order/add-order.component';
-
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 
 const routes: Routes = [
   { path:'home', component:HomeComponent},
@@ -26,7 +26,8 @@ const routes: Routes = [
   {path: 'employees/add', component: AddEmployeeComponent},
   {path: 'employees/:id', component: EditEmployeeComponent},  
   {path: 'customers/:id', component: EditCustomerComponent}, 
-  {path: 'employees/orders/:id', component: EmployeeOrdersComponent}
+  {path: 'employees/orders/:id', component: EmployeeOrdersComponent},
+  {path: 'chart', component: BarChartComponent}
 ];
 
 @NgModule({
