@@ -9,7 +9,30 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class AddOrderComponent implements OnInit {
 
-  
+
+  itemprice = {
+    breadsticks: 2.50,
+    soda: 3.25,
+    sPP: 7.35,
+    mPP: 9.35,
+    lPP: 14.00,
+    sHP: 8.50,
+    mHP: 10.50,
+    lHP: 16.00
+  }
+   
+
+
+  quantities = {
+    quantitySoda: 0,
+    quantityBreadSticks: 0,
+    quantitysPP: 0,
+    quantitymPP: 0,
+    quantitylPP: 0,
+    quantitysHP: 0,
+    quantitymHP: 0,
+    quantitylHP: 0,
+  }
 
   orders = {
     customerid: '',
@@ -18,7 +41,6 @@ export class AddOrderComponent implements OnInit {
     total: null
   }
 
-  quantitySoda : number = 0;
   submitted = false;
 
   constructor(private orderService: OrderService) { }
@@ -29,6 +51,7 @@ export class AddOrderComponent implements OnInit {
 
 
   saveOrder(): void {
+    this.calculateTotal();
     const data = {
       customerid: this.orders.customerid,
       employeeid: this.orders.employeeid,
@@ -57,9 +80,17 @@ export class AddOrderComponent implements OnInit {
 
   }
 
-  calculatePrice(){
-    this.quantitySoda = parseFloat((<HTMLInputElement>document.getElementById("quantitySoda")).value);
-    console.log(this.quantitySoda);
+  calculateTotal(){
+    
+    this.orders.total =  (this.itemprice.soda * this.quantities.quantitySoda) + 
+      (this.itemprice.breadsticks * this.quantities.quantityBreadSticks) + 
+      (this.itemprice.sPP * this.quantities.quantitysPP) +
+      (this.itemprice.mPP * this.quantities.quantitymPP) +
+      (this.itemprice.lPP * this.quantities.quantitylPP) +
+      (this.itemprice.sHP * this.quantities.quantitysHP) +
+      (this.itemprice.mHP * this.quantities.quantitymHP) +
+      (this.itemprice.lHP * this.quantities.quantitylHP);
+    
   }
 
   newOrders(): void {

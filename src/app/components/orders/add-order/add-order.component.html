@@ -1,15 +1,17 @@
 <div>
     <h1>Create an Order</h1>
     <br>
-    <div style="display: block; background-color: aliceblue; color:red" *ngIf=submitted>Order sumitted successfully! </div> <br><br>
+    <div class="m-30" style="display: block; background-color: aliceblue; color:red" *ngIf=submitted>Order sumitted successfully! </div> <br><br>
 
     <form action="orders" method="POST">
      
-        <div style="display: flex; float: left; ">
+       
+        <div style=" float: left;">
+            
         <table align="center">
             <tr align="center">
                 <td><hr> Menu Items
-                    <hr></td>
+                    <hr></td>   
                 <td><hr> Price
                     <hr></td>
                 <td><hr> Quantity
@@ -19,70 +21,69 @@
                 <td>Soda</td>
                 <td align="center">$3.25</td>
                 <td align="center"><input type="number" id="quantitySoda"
-                    name="quantitySoda" value="0"></td>
+                    name="quantitySoda"  [(ngModel)]="quantities.quantitySoda" value="0"></td>
             </tr>
             <tr>
                 <td>BreadSticks</td>
                 <td align="center">$2.50</td>
                 <td align="center"><input type="number"
-                    id="quantityBreadSticks" name="quantityBreadSticks" value="0">
+                    id="quantityBreadSticks"  [(ngModel)]="quantities.quantityBreadSticks" name="quantityBreadSticks" value="0">
                 </td>
             </tr>
             <tr>
                 <td>Small Pepperoni Pizza</td>
                 <td align="center">$7.35</td>
                 <td align="center"><input type="number" id="quantitysPP"
-                    name="quantitysPP" value="0"></td>
+                    name="quantitysPP" [(ngModel)]="quantities.quantitysPP" value="0"></td>
             </tr>
             <tr>
                 <td>Medium Pepperoni Pizza</td>
                 <td align="center">$9.35</td>
                 <td align="center"><input type="number" id="quantitymPP"
-                    name="quantitymPP" value="0"></td>
+                    [(ngModel)]="quantities.quantitymPP" name="quantitymPP" value="0"></td>
             </tr>
             <tr>
                 <td>Large Pepperoni Pizza</td>
                 <td align="center" >$14.00</td>
                 <td align="center"><input type="number" id="quantitylPP"
-                    name="quantitylPP" value="0"></td>
+                    [(ngModel)]="quantities.quantitylPP" name="quantitylPP" value="0"></td>
             </tr>
             <tr>
                 <td>Small House Special Pizza</td>
                 <td align="center">$8.50</td>
                 <td align="center"><input type="number" id="quantitysHP"
-                    name="quantitysHP" value="0"></td>
+                    [(ngModel)]="quantities.quantitysHP" name="quantitysHP" value="0"></td>
             </tr>
             <tr>
                 <td>Medium House Special Pizza</td>
                 <td align="center">$10.50</td>
                 <td align="center"><input type="number" id="quantitymHP"
-                    name="quantitymHP" value="0"></td>
+                    [(ngModel)]="quantities.quantitymHP" name="quantitymHP" value="0"></td>
             </tr>
             <tr>
                 <td>Large House Special Pizza</td>
                 <td align="center">$16.00</td>
                 <td align="center"><input type="number" id="quantitylHP"
-                    name="quantitylHP" value="0"></td>
+                    [(ngModel)]="quantities.quantitylHP" name="quantitylHP" value="0"></td>
             </tr>
 
         </table>
 
-        <button type="button" id="button" click="calculatePrice()" > Calculate Total</button>
     </div>
 
-    <div style="float: right;">
+    <div style="float: right; background-color: coral; position: fixed; margin-left: 75%">
         
-        
+            <br><br>
             <input type="text" placeholder="Customer id" [(ngModel)]="orders.customerid" id="customerid" name="customerid">   <br><br>
             <input type="text" placeholder="Employee id" [(ngModel)]="orders.employeeid" id="employeeid" name="employeeid">   <br><br>
             <input type="datetime-local" placeholder="Time" [(ngModel)]="orders.timeordercreated" id="timeordercreated" name="timeordercreated">   <br><br>
-            <input type="number" placeholder="Total" [(ngModel)]="orders.total" id="total" name="total" readonly>   <br><br>
-            <input type="submit" (click)="saveOrder()" value="Add Order">
+            <input type="number" placeholder="Total" [(ngModel)]="orders.total" id="total" name="total" readonly>   <br>
+            <button type="button" style="background-color: lightgreen;" id="button" (click)="calculateTotal()" > <strong>Calculate Total</strong></button><br><br>
+            <input type="submit" style="background-color: lime;" (click)="saveOrder()" value="Add Order">
        
     </div>
 
 </form>
 
-
-
 </div>
+
