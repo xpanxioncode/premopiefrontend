@@ -26,7 +26,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     EditCustomerComponent,
     OrdersComponent,
     AddOrderComponent,
-    EditOrderComponent
+    EditOrderComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
