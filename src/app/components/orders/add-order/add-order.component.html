@@ -1,5 +1,8 @@
 <div>
     <h1>Create an Order</h1>
+    <br>
+    <div style="display: block; background-color: aliceblue; color:red" *ngIf=submitted>Order sumitted successfully! </div> <br><br>
+
     <form action="orders" method="POST">
      
         <div style="display: flex; float: left; ">
@@ -39,7 +42,7 @@
             </tr>
             <tr>
                 <td>Large Pepperoni Pizza</td>
-                <td align="center">$14.00</td>
+                <td align="center" >$14.00</td>
                 <td align="center"><input type="number" id="quantitylPP"
                     name="quantitylPP" value="0"></td>
             </tr>
@@ -64,70 +67,22 @@
 
         </table>
 
-        <button type="button" id="button" onclick="calculatePrice()" > Calculate Total</button>
+        <button type="button" id="button" click="calculatePrice()" > Calculate Total</button>
     </div>
 
     <div style="float: right;">
         
-       
         
             <input type="text" placeholder="Customer id" [(ngModel)]="orders.customerid" id="customerid" name="customerid">   <br><br>
             <input type="text" placeholder="Employee id" [(ngModel)]="orders.employeeid" id="employeeid" name="employeeid">   <br><br>
             <input type="datetime-local" placeholder="Time" [(ngModel)]="orders.timeordercreated" id="timeordercreated" name="timeordercreated">   <br><br>
-            <!-- <input type="number" placeholder="Total" [(ngModel)]="orders.total" id="total" name="total">   <br><br> -->
+            <input type="number" placeholder="Total" [(ngModel)]="orders.total" id="total" name="total" readonly>   <br><br>
             <input type="submit" (click)="saveOrder()" value="Add Order">
        
     </div>
 
 </form>
 
-<script>
-    $("#total").click(function() {
-        calculatePrice();
-    });
-
-
-
-    function calculatePrice() {
-        //select data
-        var breadsticks = 2.50;
-        var soda = 3.25;
-        var sPP = 7.35;
-        var mPP = 9.35;
-        var lPP = 14.00;
-        var sHP = 8.50;
-        var mHP = 10.50;
-        var lHP = 16.00;
-        
-        var quantityBreadSticks = $("#quantityBreadSticks").val();
-        var quantitySoda = $("#quantitySoda").val();
-        var quantitysPP = $("#quantitysPP").val();
-        var quantitymPP = $("#quantitymPP").val();
-        var quantitylPP = $("#quantitylPP").val();
-        var quantitysHP = $("#quantitysHP").val();
-        var quantitymHP = $("#quantitymHP").val();
-        var quantitylHP = $("#quantitylHP").val();
-
-
-
-        //calculate final cost
-        var total = (quantityBreadSticks * breadsticks)
-                + (quantitySoda * soda) + (quantitysPP * sPP)
-                + (quantitymPP * mPP) + (quantitylPP * lPP)
-                + (quantitysHP * sHP) + (quantitymHP * mHP)
-                + (quantitylHP * lHP);
-
-
-
-        console.log(total);
-        //print value to orderTotal
-        $("#total").val(total);
-
-
-
-
-    }
-</script>
 
 
 </div>
