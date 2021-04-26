@@ -1,5 +1,5 @@
-<h3>Edit Employee</h3>
-<div>
+<h1>Edit Employee</h1>
+<div class="formdiv">
       <div *ngIf="currentEmp">
             <form>
                    <label for="employeeid">Employee ID </label><br>
@@ -20,7 +20,8 @@
                     <label for="active"> Active</label> <br>                    
                     <input [(ngModel)]="currentEmp.active" name="active" id="active" type="checkbox"><br>
                     <button type="submit" (click)="updateEmployee()" > Update Employee</button>
-               
+
+                    <br><br>
             </form>
     </div>
             

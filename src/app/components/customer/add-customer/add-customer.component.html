@@ -1,4 +1,36 @@
-<div>
+<h1>Add a new customer</h1>
+<div class="formdiv">
+    
+    <form action="customers" method="POST">
+    <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="Ex. Samantha" id="firstname" [(ngModel)]="customer.firstname" name="firstname">
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="Ex. Lowe" id="lastname" [(ngModel)]="customer.lastname" name="lastname">
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="Ex. Innnnnnnn West Philadelphia" id="address" [(ngModel)]="customer.address" name="address">
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Phone Number</mat-label>
+        <input matInput placeholder="Ex. 867-5309" id="phonenumber" [(ngModel)]="customer.phonenumber" name="phonenumber">
+    </mat-form-field>
+    <br><br>
+    <mat-form-field class="example-full-width">
+        <mat-label>Zip Code</mat-label>
+        <input matInput placeholder="Ex. 55501" id="zip" [(ngModel)]="customer.zip" name="zip">
+    </mat-form-field>
+    <br><br>
+    <input type="button" (click)="saveCustomer()" value="Submit">
+    </form>
+
+    <!-- The original non-Material form.
     <form action="customers" method="POST">
         <table>
                 <tr>
@@ -44,5 +76,5 @@
         
 
     </form>
-
+-->
 </div>
