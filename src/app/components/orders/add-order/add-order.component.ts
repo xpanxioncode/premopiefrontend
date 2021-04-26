@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OrderService } from 'src/app/services/order.service';
 
+
 @Component({
   selector: 'app-add-order',
   templateUrl: './add-order.component.html',
@@ -8,17 +9,22 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class AddOrderComponent implements OnInit {
 
+  
+
   orders = {
     customerid: '',
     employeeid: '',
     timeordercreated: Date,
     total: null
   }
+
+  quantitySoda : number = 0;
   submitted = false;
 
   constructor(private orderService: OrderService) { }
 
   ngOnInit(): void {
+    
   }
 
 
@@ -45,12 +51,19 @@ export class AddOrderComponent implements OnInit {
 
         // this.retrieveEmployees();
        
+        this.newOrders();
+        
        
 
   }
 
+  calculatePrice(){
+    this.quantitySoda = parseFloat((<HTMLInputElement>document.getElementById("quantitySoda")).value);
+    console.log(this.quantitySoda);
+  }
+
   newOrders(): void {
-    this.submitted = false;
+    this.submitted = false; 
     this.orders = {
       customerid: '',
       employeeid: '',

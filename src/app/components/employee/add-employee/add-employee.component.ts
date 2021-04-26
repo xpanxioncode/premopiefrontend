@@ -44,7 +44,7 @@ export class AddEmployeeComponent implements OnInit {
 
         // this.retrieveEmployees();
        
-       
+       this.newEmployee();
 
   }
 

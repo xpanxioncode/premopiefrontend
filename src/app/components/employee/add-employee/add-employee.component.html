@@ -29,6 +29,8 @@
 
     <!--  
     <form action="employees" method="POST">
+        
+        <div style="display: block; background-color: aliceblue; color:red" *ngIf=submitted>Employee added successfully! </div> <br><br>
         <table>
                 <tr>
                     <td> <input type="text" id="firstname" [(ngModel)]="employee.firstname" name="firstname" placeholder="First Name"> <br></td>

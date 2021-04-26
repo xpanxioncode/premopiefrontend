@@ -43,7 +43,10 @@ export class AddCustomerComponent implements OnInit {
         });
 
         // this.retrieveCustomers();
+
+        
        
+        this.newCustomer();
        
 
   }
