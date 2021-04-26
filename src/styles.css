@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-h1, h2, h3, nav, h4, table, p, form label {
+h1, h2, h3, nav, h4, table, p {
     background: coral;
 }
 
@@ -40,3 +40,9 @@ button {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.formdiv {
+    width: 50%; 
+    background-color:coral; 
+    margin: auto;
+}

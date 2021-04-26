@@ -1,5 +1,33 @@
-<div>
-    <h3>Add new employee</h3>
+
+    <h1>Add new employee</h1>
+   
+    <div class="formdiv">
+        <form action="employees" method="POST">
+            <mat-form-field class="example-full-width">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="Ex. Samantha" id="firstname" [(ngModel)]="employee.firstname" name="firstname">
+            </mat-form-field><br><br>
+            <mat-form-field class="example-full-width">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="Ex. Lowe" id="lastname" [(ngModel)]="employee.lastname" name="lastname">
+            </mat-form-field><br><br>
+            <mat-form-field class="example-full-width">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Ex. Innnnnn West Philadelphia" id="address" [(ngModel)]="employee.address" name="address">
+            </mat-form-field><br><br>
+        </form>
+        <mat-form-field class="example-full-width">
+            <mat-label>Tax Identification Number</mat-label>
+            <input matInput placeholder="123-45-6789" id="tin" [(ngModel)]="employee.tin" name="tin">
+        </mat-form-field><br><br>
+        Active: <input type="checkbox" id="active" [(ngModel)]="employee.active" name="active"><br><br>
+        <input type="button" (click)="saveEmployee()" value="Submit">
+                        &nbsp;&nbsp;&nbsp;
+        <input type="reset" value="Clear">
+        <br><br>
+    </div>
+
+    <!--  
     <form action="employees" method="POST">
         
         <div style="display: block; background-color: aliceblue; color:red" *ngIf=submitted>Employee added successfully! </div> <br><br>
@@ -42,12 +70,6 @@
         </table>
 
         <br>
-       
-        
-        
-        
-        
-
     </form>
+    -->
 
-</div>

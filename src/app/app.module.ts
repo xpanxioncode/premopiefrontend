@@ -28,6 +28,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -64,7 +65,8 @@ import { ChartsModule } from 'ng2-charts';
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    ChartsModule
+    ChartsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

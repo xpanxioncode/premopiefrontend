@@ -1,10 +1,11 @@
-<h3>Edit Customer</h3>
-<div>
-    <div *ngIf="currentCustomer">
+<h1>Edit Customer</h1>
 
+<div class="formdiv">
+    <div *ngIf="currentCustomer">
+            
           <form>
                  <label for="customerid">Customer ID </label><br>
-                 <input [(ngModel)]="currentCustomer.customerid" name="customerid" id="customerid" type="text">
+                 <input matInput [(ngModel)]="currentCustomer.customerid" name="customerid" id="customerid" type="text">
                  <br>
 
                   <label for="firstname"> First Name </label><br>                    
@@ -28,7 +29,7 @@
                   <br>
                
                   <button type="submit" (click)="updateCustomer()" > Update Customer</button>
-             
+                  <br><br>
           </form>
   </div>
           
