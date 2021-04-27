@@ -19,7 +19,7 @@ export class BarChartComponent {
   barChartPlugins = [];
 
   barChartData: ChartDataSets[] = [
-    { data: [1200, 925, 950, 1001, 1100], label: 'Sales This Year in Dollars, By Zip Code' }
+    { data: [55.50, 48.75, 60.15, 47.50, 56.75], label: 'Sales This Year in Dollars, By Zip Code' }
   ];
 
 }

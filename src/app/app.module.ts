@@ -12,7 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddEmployeeComponent } from './components/employee/add-employee/add-employee.component';
 import { EditEmployeeComponent } from './components/employee/edit-employee/edit-employee.component';
 import { EmployeeOrdersComponent } from './components/employee/employee-orders/employee-orders.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddCustomerComponent } from './components/customer/add-customer/add-customer.component';
 import { EditCustomerComponent } from './components/customer/edit-customer/edit-customer.component';
 import { OrdersComponent } from './components/orders/orders.component';
@@ -28,7 +28,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { ChartsModule } from 'ng2-charts';
-import {MatInputModule} from '@angular/material/input';
+import {MatInputModule} from '@angular/material/input'; 
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 @NgModule({
@@ -66,7 +67,9 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatIconModule,
     ChartsModule,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule,
+    MatCarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
