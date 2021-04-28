@@ -6,10 +6,11 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSelectChange } from '@angular/material/select';
 import { MatTableDataSource } from '@angular/material/table';
 import { OrderService } from 'src/app/services/order.service';
+
 export interface Order {
   orderId: number;
-  customerid: object;
-  employeeid: object;
+  customer: object;
+  employee: object;
   timeordercreated: Date;
   total: number;
 }
@@ -26,6 +27,9 @@ export class OrdersComponent implements OnInit {
   pipe: DatePipe;
   zips = [55501, 55502, 55503, 55504]
   zipCode: number = null;
+  endDate:  Date = null;
+  startDate: Date = null;
+  
   filterForm = new FormGroup({
     fromDate: new FormControl(),
     toDate: new FormControl(),
@@ -50,5 +54,64 @@ export class OrdersComponent implements OnInit {
         console.log(error);
       });
   }
-       
+ 
+  saveZipCode(event: MatSelectChange) {
+    this.zipCode = event.value;
+  }
+  
+  saveStartDate(event: MatDatepickerInputEvent<Date>) {
+    this.startDate = event.value;
+  }
+
+  saveEndDate(event: MatDatepickerInputEvent<Date>) {
+    this.endDate = event.value;
+  }
+
+  applyFilter() {
+    let temp = [];
+    this.ordersTotal = 0;
+
+    if(this.zipCode) {
+        this.ordersTotal = 0;
+        this.orders.forEach(order => {
+          if(order.customer['zipCode'] == this.zipCode) {
+            temp.push(order);
+            this.ordersTotal += order.total;
+          }
+        })
+    } else {
+      temp = this.orders; //?
+    }
+
+    let tempDate = [];
+    if(this.startDate && this.endDate) {
+      this.ordersTotal = 0;
+      temp.forEach(order => {
+        if(new Date(order.timeordercreated) >= this.startDate && new Date(order.timeordercreated) <= this.endDate) {
+          tempDate.push(order);
+          this.ordersTotal += order.total;
+        }
+      })
+    } else {
+      tempDate = temp;
+    }
+    this.dataSource = new MatTableDataSource<Order>(tempDate);
+    this.dataSource.paginator = this.paginator;
+  }
+
+  clearFilter() {
+    this.ordersTotal = 0;
+    this.startDate = null;
+    this.endDate = null;
+    this.zipCode = null;
+    this.orders.forEach(order => {
+      this.ordersTotal += order.total;
+    })
+    this.dataSource = new MatTableDataSource<Order>(this.orders);
+    this.dataSource.paginator = this.paginator;
+  }
+
+
+
+
 }

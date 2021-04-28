@@ -19,6 +19,10 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { AddOrderComponent } from './components/orders/add-order/add-order.component';
 import { EditOrderComponent } from './components/orders/edit-order/edit-order.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { ChartsModule } from 'ng2-charts';
+
+
 //import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule } from  '@angular/material';
 import { MatButtonModule} from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
@@ -26,8 +30,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { BarChartComponent } from './components/bar-chart/bar-chart.component';
-import { ChartsModule } from 'ng2-charts';
 import {MatInputModule} from '@angular/material/input'; 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 
@@ -56,6 +58,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MatInputModule,
     BrowserAnimationsModule,
     BrowserModule,
     BrowserAnimationsModule,

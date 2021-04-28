@@ -1,6 +1,41 @@
 <div class="product-container">
     <div class="row">
         <div class="container">
+
+        <!-- <h4>Filter Orders</h4>
+        <form>
+            <div class="zip-container">
+            <mat-form-field appearance="fill">
+                <mat-label>Filter By Zip</mat-label>
+                <mat-select (selectionChange)="saveZipCode($event)" [value]="zipCode">
+                    <mat-option *ngFor="let zip of zips" [value]="zip">
+                        {{zip}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+        <div class="date-container">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter a date range</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input (dateInput)="saveStartDate($event)" matStartDate placeholder="Start date" [value]="startDate">
+              <input (dateInput)="saveEndDate($event)" matEndDate placeholder="End date" [value]="endDate">
+            </mat-date-range-input>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        </div>
+        <div class="button-container">
+            <button mat-raised-button color="primary" class="primary" (click)="applyFilter()">Apply</button>
+            <button mat-raised-button color="basic" class="primary" (click)="clearFilter()">Clear</button>
+        </div>
+        <div class="button-container">
+            <button mat-raised-button color="accent" class="primary" routerLink="/orders/add">New Order</button>
+        </div>
+        </form> -->
+
+
+
             <div class="banner">
                 <h1>Orders</h1>
             </div>
