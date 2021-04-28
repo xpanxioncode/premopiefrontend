@@ -15,7 +15,7 @@ import { AddOrderComponent } from './components/orders/add-order/add-order.compo
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 
 const routes: Routes = [
-  { path:'home', component:HomeComponent},
+  { path:'', component:HomeComponent},
   { path:'customer', component:CustomerComponent},
   { path:'customers/add', component:AddCustomerComponent},
   { path:'employee', component:EmployeeComponent},
